@@ -36,7 +36,8 @@ features = np.array([feature_values])
 if st.button("Predict"):    
     # Predict class and probabilities    
     predicted_class = model.predict(features)[0]    
-    predicted_proba = model.predict_proba(features)[0]
+    custom_cutoff = 0.47
+    predicted_class = 1 if predicted_proba[1] >= custom_cutoff else 0
     
     # Display prediction results    
     st.write(f"**Predicted Class:** {predicted_class}")    
