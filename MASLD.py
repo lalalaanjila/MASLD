@@ -21,13 +21,13 @@ Age = st.number_input("Age:", min_value=40, max_value=70, value=60)
 # Sex: categorical selection
 Sex = st.selectbox("Sex (0=Female, 1=Male):", options=[0, 1], format_func=lambda x: 'Female (0)' if x == 0 else 'Male (1)')
 
-Strength = st.number_input("Hand grip strength (Max):", min_value=0, max_value=90, value=70) 
+Strength = st.number_input("Handgrip strength (Max):", min_value=0, max_value=90, value=70) 
 
-Sleep = st.number_input("Average sleep duration:", min_value=0.0, max_value=1.0, value=0.450)
+Sleep = st.number_input("Sleep duration:", min_value=0.0, max_value=1.0, value=0.450)
 
-Light = st.number_input("Average light duration:", min_value=0.0, max_value=1.0, value=0.250)
+Light = st.number_input("Light physical activity:", min_value=0.0, max_value=1.0, value=0.250)
 
-Moderate = st.number_input("Average moderate-vigorous duration:", min_value=0.0, max_value=1.0, value=0.055)
+Moderate = st.number_input("Moderate-to-vigorous physical activity:", min_value=0.0, max_value=1.0, value=0.055)
 
 # Process inputs and make predictions
 feature_values = [Age, Sex, Strength, Sleep, Light, Moderate]
